@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+}
+
+h2,h3 {
+  color: salmon;
+}
+
+footer {
+  padding: 20px;
+  color: white; /*Warna Font*/
+  background-color: #00a2c6; /*Background/belakangnya*/
+}
