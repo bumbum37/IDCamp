@@ -1,8 +1,49 @@
 <html>
     <head>
         <title>Ini merupakan judul dari dokumen HTML</title>
+        <style>
+
+h1 ~ p{ /*general sibling selector [semua p setelah h1/induknya]*/
+    color: skyblue;
+}
+
+div.mahasiswa p{ /*Descendant selector [semua p dalam div kelasnya mahasiswa]*/
+    background-color: salmon;
+}
+
+div.dosen > p{ /*Child Selector[semua p yang ada di div kelasnya dosen selagi induknya dosen]*/
+    background-color: limegreen;
+}
+h3+h4 { /*hanya satu h4 Setelah h3*/
+    color:slateblue;
+}
+apa pseudo-class pada sebuah elemen anchor:
+
+/* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+a:link {
+   color: red;
+}
+ 
+/* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+a:visited {
+   color: green;
+}
+ 
+/* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+a:hover {
+   color: pink;
+}
+ 
+/* rule akan diterapkan pada sebuah tautan ketika ditekan */
+a:active {
+   color:orange;
+}
+        </style>
+
+
     </head>
     <body>
+        <a href="google.com">link</a>
         <h1>header yang diletakan di dalam elemen body</h1>
         <p translate="yes">This text has been change use google translate</p>
         <!-- translate yes ADALAH ketika fitur di chrome -> translatenya dinyalakan maka akan diubah ke indonesia + -->
@@ -11,5 +52,35 @@
         yang berguna jika suatu kejadian
         lupa, maka komentar dapat membantu
         -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="mahasiswa">
+            <p>Mahasiswa1 Shell</p>
+            <p>Mahasiswa2 Ilulu</p>
+            <span>
+                <p>Mahasiswa3 Mamay</p> <!-- yang ini akan MASUK karena Descendant selector-->
+            </span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="dosen"> 
+            <p>Dosen1 Dody Ferdiansyah</p>
+            <p>Dosen2 Sandhika Galih</p>
+            <span><p>Dosen3 Onno W.Purbo</p></span> <!-- yang ini TIDAK termasuk karena bukan anak dari div-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Hello Dunia</h3>
+        <h4>Hello Indonesia</h4>
+        <h4>Hello America</h4>
+        </div>
     </body>
 </html>
