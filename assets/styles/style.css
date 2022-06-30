@@ -1,13 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap'); /*Import font online dari gugel*/
+
 body {
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif; /*Menerapkan font dari google*/
+}
+
+nav a{
+  font-weight: 400px;
+  font-size: 18px;
+  text-decoration: none;
+}
+nav a:hover{ /*Ketika kursor diarahkan*/
+  font-weight: bold;
+  color: white;
+  background-color: lightpink;
 }
 
 h2,h3 {
-  color: salmon;
+  color: lightsalmon;
 }
-
+.profile header{
+  text-align: center;
+}
 footer {
   padding: 20px;
   color: white; /*Warna Font*/
   background-color: #00a2c6; /*Background/belakangnya*/
+  text-align: center;
+  font-weight: bold;
 }

@@ -17,11 +17,11 @@ div.dosen > p{ /*Child Selector[semua p yang ada di div kelasnya dosen selagi in
 h3+h4 { /*hanya satu h4 Setelah h3*/
     color:slateblue;
 }
-apa pseudo-class pada sebuah elemen anchor:
 
 /* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
 a:link {
    color: red;
+    text-decoration: none;
 }
  
 /* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
@@ -38,11 +38,47 @@ a:hover {
 a:active {
    color:orange;
 }
+ilai Keempat :  menentukan warna yang digunakan pada bayangan.
+
+Berikut ini contoh penggunaan dari properti drop shadow:
+
+p#one {
+   text-shadow: 1px 1px 0px #000000;
+   background-color: #eeeeee;
+   color: #666666;
+}
+ 
+p#two {
+   text-shadow: 1px 1px 3px #666666;
+   background-color: #dddddd;
+   color: #666666;
+}
+ 
+p#three {
+   text-shadow: 2px 2px 7px #111111;
+   background-color: #cccccc;
+   color: #ffffff;
+}
+ 
+p#four {
+   text-shadow: -1px -1px #666666;
+   background-color: #cccccc;
+   color: #bbbbbb;
+}
         </style>
 
 
     </head>
     <body>
+        <p id="one">Teks 1</p>
+        <p id="two">Teks 2</p>
+        <p id="three">Teks 3</p>
+        <p id="four">Teks 4</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <a href="google.com">link</a>
         <h1>header yang diletakan di dalam elemen body</h1>
         <p translate="yes">This text has been change use google translate</p>
