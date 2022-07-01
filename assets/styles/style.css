@@ -2,24 +2,64 @@
 
 body {
   font-family: 'Quicksand', sans-serif; /*Menerapkan font dari google*/
+  margin: 0; /*untuk menghilangkan margin&padding browser*/
+  padding: 0;
+/*Pertama kita hilangkan nilai margin dan padding standar browser dengan menuliskan properti margin dan padding yang diberi nilai 0 pada body selector. Dengan begitu layout yang ditampilkan akan memenuhi seluruh lebar dan tinggi dari jendela browser.*/
 }
-
+main{
+  padding: 20px;
+  /*karena margin &pading standar browser sudah di 0 kan. maka untuk nyaman dibaca pake padding di main nya*/
+}
+nav {
+  background-color: #00a2c6;
+  padding: 5px; /*jarak navigasi*/
+}
 nav a{
   font-weight: 400px;
   font-size: 18px;
-  text-decoration: none;
+  text-decoration: none; /*delete underline*/
+  color: white; /*ubah dari link biru jadi putih*/
+}
+nav li{
+  display: inline;
+  margin-right: 20px; /*jarak luar kanan tiap-tiap list*/
+  list-style-type: none; /*https://www.gotutorid.com/css/css-lists/#:~:text=properti%20list%2Dstyle%2Dtype%20digunakan,untuk%20daftar%20item%20yang%20dibuat.*/
 }
 nav a:hover{ /*Ketika kursor diarahkan*/
   font-weight: bold;
   color: white;
   background-color: lightpink;
 }
-
+.jumbotron { /*halaman atas*/
+  padding: 60px;
+  color: white;
+  font-size: 20px;
+  background-color: #00c8eb;
+  text-align: center;
+}
 h2,h3 {
   color: lightsalmon;
 }
+.card {
+   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+  /*Kedua properti tersebut membuat gambar yang ditampilkan dapat menyesuaikan lebar dan panjang dengan mempertahankan kualitas rasio aslinya.*/
+}
+
 .profile header{
   text-align: center;
+}
+.profile img{
+  width: 200px;
 }
 footer {
   padding: 20px;

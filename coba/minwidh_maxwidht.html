@@ -1,0 +1,57 @@
+wa baris teks yang muncul tidak terlalu lebar.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .content {
+           max-width: 800px;
+           height: 400px;
+           margin: 0 auto;
+           background-color: deeppink;
+       }
+
+       .main{
+         padding: 10px 50px 5px 25px;
+        background-color: skyblue;
+       }
+       .haha{
+         background-color: salmon;
+        border: 1px solid skyblue;
+          margin: 10px auto; /*10px = atas bawah, auto = kiri kanan atau relative dengan pinggir browser*/
+            /*Margin ini bersifat collapsed, yang artinya dapat menumpuk jika terdapat dua margin yang saling bertumpukan. Anda bisa melihat pada margin bawah dan margin atas pada kedua elemen tersebut. Hal itu menjelaskan mengapa jarak vertikal antar elemen tersebut tidak 40px melainkan 20px. */
+       }
+       .hihi{
+         background-color: skyblue;
+        border: 1px solid pink;
+          width: 50%;
+          margin: 0px auto; /*10px = atas bawah, auto = kiri kanan*/
+       }
+   </style>
+</head>
+<body>
+<div class="content">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eius explicabo fuga iusto magni minus odit praesentium, quasi quisquam quos repellat suscipit tempora tenetur? Assumenda cum laborum officiis quos ratione.</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="main">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur, explicabo odio dolor beatae vero doloribus vel earum deserunt veritatis sed eos veniam, optio ut dolore, nemo impedit quia sunt!Odio ducimus adipisci repellat quasi doloremque! Asperiores iusto fugit, officiis exercitationem facere quaerat possimus ullam eligendi corrupti voluptatem magni hic dignissimos nihil excepturi animi doloribus enim sit est eius delectus.</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="haha">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto impedit nihil suscipit non numquam animi eos dicta! Dolorem, molestiae iusto. Ipsam iure nesciunt recusandae perferendis nobis aspernatur exercitationem tenetur?</p>
+</div>
+<div class="hihi">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem culpa neque, fuga assumenda quae minima molestias, totam, sint veniam modi perspiciatis. Est, qui magni quas optio atque perferendis dolore tenetur!</p>
+</div>
+</body>
+</html>
+
