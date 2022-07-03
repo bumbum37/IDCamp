@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ * {
+   /* digunakan untuk menghapus seluruh padding dan margin standar yang diberikan browser pada elemen */
+  margin: 0;
+  padding: 0;
+ 
+  /* Menggunakan border-box dalam perhitungan dimensi box-nya */
+  box-sizing: border-box;
+  }
+.container{
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+#satu{
+  background-color: skyblue;
+  width: 30%;
+  height: 1000px;
+  text-align: center;
+  float: left;
+}
+#dua{
+  background-color: salmon;
+  width: 70%;
+  height: 1000px;
+  text-align: center;
+  float: right;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="satu"><p>left</p></div>
+    <div id="dua"><p>right</p></div>
+  </div>
+</body>
+</html>

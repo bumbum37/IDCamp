@@ -6,19 +6,38 @@ body {
   padding: 0;
 /*Pertama kita hilangkan nilai margin dan padding standar browser dengan menuliskan properti margin dan padding yang diberi nilai 0 pada body selector. Dengan begitu layout yang ditampilkan akan memenuhi seluruh lebar dan tinggi dari jendela browser.*/
 }
+* {
+  box-sizing: border-box;
+  /*Dengan menerapkan nilai border-box pada properti box-sizing, kita dapat menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border. */
+}
 main{
   padding: 20px;
   /*karena margin &pading standar browser sudah di 0 kan. maka untuk nyaman dibaca pake padding di main nya*/
+  overflow: auto;
+}
+#content{
+  float: left;
+  width: 75%;
+}
+aside{
+  float: right;
+  width: 25%;
+  padding-left: 20px;
 }
 nav {
   background-color: #00a2c6;
   padding: 5px; /*jarak navigasi*/
+  position: sticky;
+  /*Dengan menggunakan nilai sticky pada properti position, membuat navigasi dapat melekat pada jendela browser (layaknya fixed position) tetapi posisi awalnya tetap menempati posisi di mana ia seharusnya berada (layaknya relative position). */
+  top:0;
 }
+header{display: inline;}/*seharusnya navigasinya sudah nempel ketika user scrol*/
 nav a{
   font-weight: 400px;
   font-size: 18px;
   text-decoration: none; /*delete underline*/
   color: white; /*ubah dari link biru jadi putih*/
+
 }
 nav li{
   display: inline;
@@ -28,7 +47,9 @@ nav li{
 nav a:hover{ /*Ketika kursor diarahkan*/
   font-weight: bold;
   color: white;
-  background-color: lightpink;
+  background-color: lightsalmon;
+  border-radius: 7px;/*memberikan lengkungan warna*/
+  padding: 3px; /*memberikan ruang antara border radius dan teksnya*/
 }
 .jumbotron { /*halaman atas*/
   padding: 60px;
@@ -59,7 +80,7 @@ h2,h3 {
   text-align: center;
 }
 .profile img{
-  width: 200px;
+  width: 100px;
 }
 footer {
   padding: 20px;
@@ -68,3 +89,25 @@ footer {
   text-align: center;
   font-weight: bold;
 }
+
+/*media querys digubakan untuk responsibilitas web ketika di buka di hp. jdi ga cukup pake meta viewport , harusnya meta sama media querys*/
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+/*@media screen and (max-width: 1000px) {
+   ul,
+  li {
+    line-height: 5px;
+  }
+} digunakan untuk teks h3 dan navigasinya terlihat ketika di hp*/
+
+
+
+/*Kecilkan css mu dengan web https://www.toptal.com/developers/cssminifier*/
+/*Hasil dari sudah dikecilkan akan seperti ini*/
+/*@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap);header,nav li{display:inline}footer,nav{background-color:#00a2c6}.jumbotron,.profile header,footer{text-align:center}footer,nav a:hover{color:#fff;font-weight:700}body{font-family:Quicksand,sans-serif;margin:0;padding:0}*{box-sizing:border-box}main{padding:20px;overflow:auto}#content{float:left;width:75%}aside{float:right;width:25%;padding-left:20px}nav{padding:5px;position:sticky;top:0}nav a{font-weight:400px;font-size:18px;text-decoration:none;color:#fff}nav li{margin-right:20px;list-style-type:none}nav a:hover{background-color:#ffa07a;border-radius:7px;padding:3px}.jumbotron{padding:60px;color:#fff;font-size:20px;background-color:#00c8eb}.card,footer{padding:20px}h2,h3{color:#ffa07a}.card{box-shadow:0 4px 10px 0 rgba(0,0,0,.2);border-radius:5px;margin-top:20px}.featured-image{width:100%;max-height:300px;object-fit:cover;object-position:center}.profile img{width:100px}@media screen and (max-width:1000px){#content,aside{width:100%;padding:0}}*/
